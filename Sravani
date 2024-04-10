@@ -1,0 +1,31 @@
+package password_generator;
+import java.util.scanner;
+public class password
+{
+  public static void main(String args[])
+  {
+     Scanner inputvalue=new Scanner(System.in);
+      int digitvalue=inputvalue.nextInt();
+      String lower_cases="abcdefghijklmnopqrstuvwxyz";
+      String upper_cases="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+       String passwordvalue="";
+       for(int i=0;i<digitvalue;i++)
+        {
+           int rand=(int)(3 * Math.random());
+           switch(rand){
+            case 0:
+            passwordvalue+=String.valueof((int)(0*Math.random()));
+            break;
+            case 1:
+            rand=(int)(lower_cases.length()*Math.random());
+            passwordvalue+=String.valueof(lower_cases.charAt(rand));
+            break;
+            case 2:
+            rand=(int)(upper_cases.length()*Math.random());
+            passwordvalue+=String.valueof(upeer_cases.charAt(rand));
+            break;
+            }
+        }
+           System.out.println(passwordvalue);
+    }
+}
